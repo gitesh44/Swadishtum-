@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Swadishtum Brand Colors - Indian Inspired */
+    --background: 32 20% 96%; /* Warm ivory */
+    --foreground: 15 25% 15%; /* Deep charcoal */
+
+    --card: 32 25% 98%; /* Creamy white */
+    --card-foreground: 15 25% 15%;
+
+    --popover: 32 25% 98%;
+    --popover-foreground: 15 25% 15%;
+
+    /* Deep saffron as primary */
+    --primary: 28 88% 52%; /* Rich saffron */
+    --primary-foreground: 32 25% 98%;
+    --primary-glow: 32 95% 65%; /* Lighter saffron */
+
+    --secondary: 15 25% 15%; /* Elegant black */
+    --secondary-foreground: 32 25% 98%;
+
+    --muted: 30 15% 90%; /* Soft warm gray */
+    --muted-foreground: 15 15% 45%;
+
+    --accent: 45 85% 60%; /* Warm gold accent */
+    --accent-foreground: 15 25% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 32 25% 98%;
+
+    --border: 30 20% 85%; /* Warm border */
+    --input: 30 20% 85%;
+    --ring: 28 88% 52%; /* Saffron focus ring */
+
+    /* Custom Swadishtum Design Tokens */
+    --saffron: 28 88% 52%;
+    --saffron-light: 32 95% 65%;
+    --saffron-dark: 25 80% 45%;
+    --ivory: 32 25% 98%;
+    --warm-black: 15 25% 15%;
+    --spice-gold: 45 85% 60%;
+    --cardamom-green: 145 40% 45%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--saffron-dark)) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --gradient-spice: linear-gradient(45deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 50%, hsl(var(--saffron-dark)) 100%);
+
+    /* Shadows with saffron glow */
+    --shadow-warm: 0 4px 12px hsl(var(--primary) / 0.15);
+    --shadow-elegant: 0 8px 32px hsl(var(--primary) / 0.12);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with warm undertones */
+    --background: 15 25% 8%; /* Rich dark brown */
+    --foreground: 32 25% 95%;
+
+    --card: 15 20% 12%;
+    --card-foreground: 32 25% 95%;
+
+    --popover: 15 20% 12%;
+    --popover-foreground: 32 25% 95%;
+
+    --primary: 28 88% 58%; /* Brighter saffron for dark mode */
+    --primary-foreground: 15 25% 8%;
+    --primary-glow: 32 95% 70%;
+
+    --secondary: 15 15% 20%; /* Warm dark gray */
+    --secondary-foreground: 32 25% 95%;
+
+    --muted: 15 15% 18%;
+    --muted-foreground: 30 10% 65%;
+
+    --accent: 45 85% 65%; /* Brighter gold for dark */
+    --accent-foreground: 15 25% 8%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 32 25% 95%;
+
+    --border: 15 15% 25%;
+    --input: 15 15% 25%;
+    --ring: 28 88% 58%;
+
+    /* Dark mode gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
+    --shadow-warm: 0 4px 12px hsl(var(--primary) / 0.25);
+    --shadow-elegant: 0 8px 32px hsl(var(--primary) / 0.2);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/80;
+  }
+}
+
+@layer components {
+  /* Hero text with gradient */
+  .text-gradient {
+    background: var(--gradient-spice);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Elegant button animations */
+  .btn-elegant {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+  
+  .btn-elegant::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary to-accent transform -translate-x-full transition-transform duration-300;
+  }
+  
+  .btn-elegant:hover::before {
+    @apply translate-x-0;
+  }
+  
+  .btn-elegant > * {
+    @apply relative z-10;
+  }
+
+  /* Food card hover effects */
+  .food-card {
+    @apply transition-all duration-300 hover:shadow-elegant hover:-translate-y-1;
+  }
+
+  /* Smooth reveal animations */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Spice loading animation */
+  .animate-spice-spin {
+    animation: spiceSpin 2s linear infinite;
+  }
+  
+  @keyframes spiceSpin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Scroll indicator bounce and pulse */
+  .animate-scroll-indicator {
+    animation: scrollIndicatorBounce 1.2s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  @keyframes scrollIndicatorBounce {
+    0%, 100% {
+      transform: translateY(0) scaleY(1);
+      opacity: 1;
+    }
+    20% {
+      transform: translateY(-8px) scaleY(1.1);
+      opacity: 0.85;
+    }
+    40% {
+      transform: translateY(0) scaleY(0.95);
+      opacity: 1;
+    }
+    60% {
+      transform: translateY(8px) scaleY(1.05);
+      opacity: 0.85;
+    }
+    80% {
+      transform: translateY(0) scaleY(1);
+      opacity: 1;
+    }
+  }
+}
