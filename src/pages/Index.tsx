@@ -42,20 +42,20 @@ const Index = () => {
 
   const testimonials = [
     {
-      name: "Priya Sharma",
-      location: "Mumbai",
+      name: "Gitesh Deshmukh",
+      location: "Pune",
       rating: 5,
       text: "Absolutely incredible flavors! The biryani reminds me of my grandmother's cooking. Swadishtum has truly mastered the art of authentic Indian cuisine.",
     },
     {
-      name: "Rajesh Kumar",
-      location: "Delhi",
+      name: "Mayur Pawar",
+      location: "Hinjewadi",
       rating: 5,
       text: "Fast delivery and amazing taste! The fusion dishes are innovative yet respectful of traditional flavors. Highly recommended for food lovers.",
     },
     {
-      name: "Meera Patel",
-      location: "Bangalore",
+      name: "Aditya Mahajan",
+      location: "Viman Nagar",
       rating: 5,
       text: "The quality is consistently excellent. Every dish tells a story of passion and authenticity. Swadishtum has become our family's favorite!",
     },
@@ -143,11 +143,7 @@ const Index = () => {
           </div>
           
           {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white opacity-60 animate-scroll-indicator">
-            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-white rounded-full mt-2" />
-            </div>
-          </div>
+          {/* Removed scroll indicator mouse icon */}
         </section>
 
         {/* Features Section */}
