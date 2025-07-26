@@ -1,22 +1,16 @@
-# Welcome to your Lovable project
+# Swadishtum - Saffron Story
 
-## Project info
+## Project Info
 
-**URL**: https://lovable.dev/projects/24d7800d-fab2-465b-b4f7-45f29275b339
+This project was created by Gitesh Deshmukh.
 
 ## How can I edit this code?
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/24d7800d-fab2-465b-b4f7-45f29275b339) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+There are several ways to edit your application:
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +56,8 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/24d7800d-fab2-465b-b4f7-45f29275b339) and click on Share -> Publish.
+You can deploy this project using your preferred hosting service (such as Vercel, Netlify, or GitHub Pages). Simply build the project and follow the deployment instructions for your chosen platform.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain?
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Yes, you can! Most hosting providers allow you to connect a custom domain. Refer to your hosting provider's documentation for step-by-step instructions.
